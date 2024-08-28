@@ -20,8 +20,10 @@ class Eagle:
 class Pegasus(Horse, Eagle):
     def __init__(self):
         #super().__init__()
-        super(Pegasus, self).__init__() #  Вариант второй первый был
-        super(Horse, self).__init__() #    Вариант второй
+        # super(Pegasus, self).__init__() #  Вариант второй
+        # super(Horse, self).__init__() #    Вариант второй
+        Horse.__init__(self) # Вариант третий
+        Eagle.__init__(self) # Вариант третий
 
     def move(self, dx, dy):
         super().run(dx)
